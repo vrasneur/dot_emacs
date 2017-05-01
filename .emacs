@@ -35,13 +35,13 @@
 
 (tool-bar-mode -1)
 
-;; yank at point, not where the mouse pointer is
+; yank at point, not where the mouse pointer is
 (setq mouse-yank-at-point t)
 
 (require 'windmove)
-;; S-<arrow key> moves to the pointed window
+; S-<arrow key> moves to the pointed window
 (windmove-default-keybindings)
-;; wrap around to opposite side if at edge
+; wrap around to opposite side if at edge
 (setq windmove-wrap-around t)
 
 ;; defaults
