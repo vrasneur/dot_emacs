@@ -9,7 +9,7 @@
 (global-set-key [f4] 'end-kbd-macro)
 (global-set-key [f5] 'apply-macro-to-region-lines)
 
-;; copy line to the kill ring with F8
+; copy line to the kill ring with F8
 (global-set-key [f8] 'copy-line-as-kill)
 
 (setq hippie-expand-try-functions-list
@@ -63,14 +63,16 @@
   (mapcar '(lambda (mode) (add-hook mode hook)) modes))
 
 ; c/c++
-; linux style for all but java
+; Allman style for all but java
 (setq c-default-style
-   '((java-mode . "java") (other . "linux")))
+   '((java-mode . "java") (other . "bsd")))
 ; one tab = 2 whitespaces
 (setq c-basic-offset 2)
 ; add an offset for public, protected and private (C++)
 (c-set-offset 'access-label '-)
 (c-set-offset 'inclass '+)
+; no indent inside a namespace scope
+(c-set-offset 'innamespace 0)
 
 ; emacs lisp
 ; add the lisp symbols for the smart completion
